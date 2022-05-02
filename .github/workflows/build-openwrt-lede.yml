@@ -14,11 +14,11 @@ on:
       openwrt_soc:
         description: "Choose Amlogic SoC."
         required: false
-        default: "all"
+        default: "s912-m8s"
       openwrt_kernel:
         description: "Choose kernel version."
         required: false
-        default: "5.15.25_5.10.100"
+        default: "5.10.100"
       openwrt_size:
         description: "Set the rootfs size."
         required: false
@@ -122,7 +122,7 @@ jobs:
           tag: openwrt_s9xxx_lede_${{ env.PACKAGED_OUTPUTDATE }}
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
           allowUpdates: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASES_TOKEN }}
           body: |
             This is OpenWrt firmware for Amlogic s9xxx tv box
             * Firmware information

@@ -55,6 +55,9 @@ svn co https://github.com/hubutui/p7zip-lede/trunk package/p7zip
 rm -rf package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
+svn co https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
+
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk package/openwrt-passwall
 # Apply patch
 # git apply ../router-config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
